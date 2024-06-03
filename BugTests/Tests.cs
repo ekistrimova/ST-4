@@ -9,9 +9,8 @@ namespace BugTests
         [ExpectedException(typeof(InvalidOperationException))]
         public void ClosedTest()
         {
-            var bug = new Bug(Bug.State.Assigned);
+            var bug = new Bug(Bug.State.Open);
             bug.Close();
-            Assert.AreEqual(Bug.State.Closed, bug.getState());
         }
 
         [TestMethod]
